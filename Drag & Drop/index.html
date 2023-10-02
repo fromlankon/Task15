@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drag & Drop API</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
+    <script src="./src/js/script.js" defer></script>
+  </head>
+  <body>
+
+    <form class="top">
+      <div>
+        <div class="alertText"> Please add task
+          <div></div>
+        </div>
+        <input type="text" placeholder="Add Your Task..." class="taskInput"/>
+        <button type="submit" class="addButton"> Add </button>
+      </div>
+      <div>
+        <button class="deleteButton"> Delete All </button>
+      </div>
+    </form>
+
+      <div class="boards">
+        <div>
+          <div class="listName"> To-Do List </div>
+          <div class="board" id="boardMain">
+            <p class="task" draggable="true"> Learn all Java Script events 
+              <span title="delete" class="deleteRow"> + </span>
+            </p>
+            <p class="task" draggable="true"> Learn React 
+              <span title="delete" class="deleteRow"> + </span>
+            </p>
+            <p class="task" draggable="true"> Create real project 
+              <span title="delete" class="deleteRow"> + </span>
+            </p>
+          </div>
+        </div>
+        <div>
+          <div class="listName"> In Progress </div>
+          <div>
+            <div class="board">
+              <p class="task" draggable="true"> Learn Java Script 
+                <span title="delete" class="deleteRow"> + </span>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div class="listName"> Completed </div>
+          <div class="board">
+            <p class="task" draggable="true"> Create Drag & Drop list 
+              <span title="delete" class="deleteRow"> + </span>
+            </p>
+            <p class="task" draggable="true"> Create API link and use it in project 
+              <span title="delete" class="deleteRow"> + </span>
+            </p>
+          </div>
+        </div>
+        
+      </div>
+  </body>
+</html>

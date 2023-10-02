@@ -1,0 +1,208 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+  }
+  
+  @font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins-Regular.ttf);
+  }
+  
+  body{
+    width: 100%;
+    height: 100vh;
+    background-image: url('../img/Background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 100px;
+    backdrop-filter: blur(10px);
+  }
+  
+  .top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    position: relative;
+  }
+  
+  .addButton{
+    width: 100px;
+    height: 50px;
+    background-color: #28A745;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    cursor: pointer;
+    transition: 100ms;
+    transform: translateX(-4px);
+    user-select: none;
+  }
+  
+  .addButton:hover{
+    background-color: #25933e;
+  }
+  
+  input{
+    width: 500px;
+    height: 50px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border: none;
+    outline: none;
+    border-right: none;
+    padding: 0 16px;
+    font-size: 15px;
+    user-select: none;
+  }
+  
+  input::placeholder{
+    font-style: italic;
+  }
+  
+  .deleteButton{
+    width: 600px;
+    height: 50px;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background-color: #DC3545;
+    user-select: none;
+    transition: 100ms;
+  }
+  
+  .deleteButton:hover{
+    background-color: #c3313f;
+  }
+  
+  .boards{
+    display: flex;
+    align-items: flex-start;
+    justify-content: start;
+    gap: 50px;
+  }
+  
+  .listName{
+      width: 100%;
+      height: 50px;
+      background-color: #17A2B8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: monospace;
+      font-size: 22px;
+      user-select: none;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+  }
+  
+  p{
+    width: 95%;
+    color: #000000;
+    padding: 10px 12px;
+    background-color: #ffffff;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  
+  .heading {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .board{
+      width: 500px;
+      height: 550px;
+      overflow: hidden;
+      background-color: #343A40;
+      display: flex;
+      gap: 14px;
+      align-items: center;
+      flex-direction: column;
+      padding: 14px 0;
+  }
+  
+  .task {
+    background: white;
+    color: #343A40;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: move;
+  }
+  
+  .stylize{
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.25);
+    background: rgb(50, 50, 50);
+    color: white;
+  }
+  
+  .alertText{
+    position: absolute;
+    font-size: 12px;
+    background-color: #343A40;
+    color: white;
+    top: -40px;
+    left: 20px;
+    padding: 6px 12px;
+    border-radius: 12px;
+    border-bottom-left-radius: 0;
+    pointer-events: none;
+    user-select: none;
+    transition: 300ms;
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  
+  .alertText div{
+    width: 17px;
+    height: 17px;
+    background-color: #343A40;
+    position: absolute;
+    left: 0;
+    clip-path: polygon(100% 0, 0 0, 0 100%);
+    
+  }
+  
+  .alertText.active{
+    opacity: 1;
+    transform: translateY();
+  }
+  
+  span{
+    font-size: 26px;
+    color: #343A40;
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    text-align: center;
+    line-height: 30px;
+    transition: 300ms;
+    transform: rotate(45deg);
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  span:hover{
+    background-color: #343A40;
+    color: white;
+  }
